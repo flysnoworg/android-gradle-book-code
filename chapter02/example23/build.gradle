@@ -1,0 +1,22 @@
+task invokeMethod << {
+    method1(1,2)
+    method1 1,2
+}
+
+def method1(int a,int b){
+    println a+b
+}
+
+task printMethodReturn << {
+    def add1 = method2 1,2
+    def add2 = method2 5,3
+    println "add1:${add1},add2:${add2}"
+}
+
+def method2(int a,int b){
+    if(a>b){
+        a
+    }else{
+        b
+    }
+}

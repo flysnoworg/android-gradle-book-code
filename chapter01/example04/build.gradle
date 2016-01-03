@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+task printLog << {
+    println '输出一段日志信息'
+
+    logger.quiet('quiet日志信息.')
+    logger.error('error日志信息.')
+    logger.warn('warn日志信息.')
+    logger.lifecycle('lifecycle日志信息.')
+    logger.info('info日志信息.')
+    logger.debug('debug日志信息.')
+}

@@ -1,0 +1,17 @@
+task customTask1 {
+    doFirst {
+        println 'customTask1:doFirst'
+    }
+    doLast {
+        println 'customTask1:doLast'
+    }
+}
+
+tasks.create("customTask2") {
+    doFirst {
+        println 'customTask2:doFirst'
+    }
+    doLast {
+        println 'customTask2:doLast'
+    }
+}

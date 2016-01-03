@@ -1,0 +1,19 @@
+apply plugin: "java"
+
+//自定义一个Project的属性
+ext.age = 18
+
+//通过代码块同时自定义多个属性
+ext {
+    phone = 1334512
+    address = ''
+}
+
+
+task ex37CustomProperty << {
+    println "年龄是：${age}"
+    println "电话是：${phone}"
+    println "地址是：${address}"
+}
+
+

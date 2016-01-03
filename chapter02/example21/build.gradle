@@ -1,0 +1,15 @@
+task printStringClass << {
+    def str1 = '单引号'
+    def str2 = "双引号"
+
+    println "单引号定义的字符串类型:"+str1.getClass().name
+    println "双引号定义的字符串类型:"+str2.getClass().name
+}
+
+task printStringVar << {
+    def name = "张三"
+
+    println '单引号的变量计算:${name}'
+    println "单引号的变量计算:$name"
+    println "单引号的变量计算:${1+1}"
+}
