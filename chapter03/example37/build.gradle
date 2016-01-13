@@ -9,11 +9,27 @@ ext {
     address = ''
 }
 
+sourceSets.all {
+    ext.resourcesDir = null
+}
+
+sourceSets {
+    main {
+        resourcesDir = 'main/res'
+    }
+    test {
+        resourcesDir = 'test/res'
+    }
+}
 
 task ex37CustomProperty << {
     println "年龄是：${age}"
     println "电话是：${phone}"
     println "地址是：${address}"
+
+    sourceSets.each {
+        println "${it.name}的resourcesDir是：${it.resourcesDir}"
+    }
 }
 
 
