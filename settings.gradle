@@ -17,14 +17,14 @@ include 'services:webservice'
 */
 
 rootProject.name = 'android-gradle-book-code'
-
+//第一章项目例子定义
 include ':example02'
 project(':example02').projectDir = new File(rootDir, 'chapter01/example02')
 include ':example03'
 project(':example03').projectDir = new File(rootDir, 'chapter01/example03')
 include ':example04'
 project(':example04').projectDir = new File(rootDir, 'chapter01/example04')
-
+//第二章项目例子定义
 include ':example21'
 project(':example21').projectDir = new File(rootDir, 'chapter02/example21')
 include ':example22'
@@ -35,7 +35,7 @@ include ':example24'
 project(':example24').projectDir = new File(rootDir, 'chapter02/example24')
 include ':example25'
 project(':example25').projectDir = new File(rootDir, 'chapter02/example25')
-
+//第三章项目例子定义
 include ':example34'
 project(':example34').projectDir = new File(rootDir, 'chapter03/example34')
 include ':example35'
@@ -44,4 +44,25 @@ include ':example36'
 project(':example36').projectDir = new File(rootDir, 'chapter03/example36')
 include ':example37'
 project(':example37').projectDir = new File(rootDir, 'chapter03/example37')
-
+//第四章项目例子定义
+include ':example41'
+project(':example41').projectDir = new File(rootDir, 'chapter04/example41')
+include ':example42'
+project(':example42').projectDir = new File(rootDir, 'chapter04/example42')
+include ':example43'
+project(':example43').projectDir = new File(rootDir, 'chapter04/example43')
+include ':example45'
+project(':example45').projectDir = new File(rootDir, 'chapter04/example45')
+include ':example46'
+project(':example46').projectDir = new File(rootDir, 'chapter04/example46')
+include ':example47'
+project(':example47').projectDir = new File(rootDir, 'chapter04/example47')
+include ':example48'
+project(':example48').projectDir = new File(rootDir, 'chapter04/example48')
+include ':example49'
+project(':example49').projectDir = new File(rootDir, 'chapter04/example49')
+//第五章项目例子定义
+include ':example52'
+project(':example52').projectDir = new File(rootDir, 'chapter05/example52')
+include ':example53'
+project(':example53').projectDir = new File(rootDir, 'chapter05/example53')

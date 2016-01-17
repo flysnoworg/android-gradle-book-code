@@ -1,0 +1,9 @@
+task ex46OrderTask1 << {
+    println 'ex46OrderTask1'
+}
+
+task ex46OrderTask2 << {
+    println 'ex46OrderTask2'
+}
+
+ex46OrderTask1.mustRunAfter ex46OrderTask2

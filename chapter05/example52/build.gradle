@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+apply plugin:'java'
+apply plugin:org.gradle.api.plugins.JavaPlugin
+apply plugin:JavaPlugin
+apply {
+    plugin 'java'
+}
+
+apply(new Action<ObjectConfigurationAction>() {
+    @Override
+    void execute(ObjectConfigurationAction objectConfigurationAction) {
+        objectConfigurationAction.plugin('java')
+    }
+})
+
+apply from:'version.gradle'
+
+task ex52PrintlnTask << {
+    println "App版本是:${versionName},版本号是：${versionCode}"
+}

@@ -1,0 +1,23 @@
+task ex42AccessTask1
+ex42AccessTask1.doLast {
+    println 'ex42AccessTask1.doLast'
+}
+
+task ex42AccessTask2
+tasks['ex42AccessTask2'].doLast {
+    println 'ex42AccessTask2.doLast'
+}
+
+task ex42AccessTask3
+tasks['ex42AccessTask3'].doLast {
+    println tasks.findByPath(':example42:ex42AccessTask3')
+    println tasks.getByPath(':example42:ex42AccessTask3')
+    println tasks.findByPath(':example42:asdfasdfasdf')
+}
+
+task ex42AccessTask4
+tasks['ex42AccessTask4'].doLast {
+    println tasks.findByName('ex42AccessTask4')
+    println tasks.getByName('ex42AccessTask4')
+    println tasks.findByName('asdfasdfasdf')
+}

@@ -1,0 +1,29 @@
+def Task ex41CreateTask1 = task(ex41CreateTask1)
+
+ex41CreateTask1.doLast {
+    println "创建方法原型为：Task task(String name) throws InvalidUserDataException"
+}
+
+
+def Task ex41CreateTask2 = task(ex41CreateTask2,group:BasePlugin.BUILD_GROUP)
+
+ex41CreateTask2.doLast {
+    println "创建方法原型为：Task task(Map<String, ?> args, String name) throws InvalidUserDataException"
+    println "任务分组：${ex41CreateTask2.group}"
+}
+
+task ex41CreateTask3 {
+    description '演示任务创建'
+    doLast {
+        println "创建方法原型为：Task task(String name, Closure configureClosure)"
+        println "任务描述：${description}"
+    }
+}
+
+tasks.create('ex41CreateTask4') {
+    description '演示任务创建'
+    doLast {
+        println "创建方法原型为：Task create(String name, Closure configureClosure) throws InvalidUserDataException"
+        println "任务描述：${description}"
+    }
+}

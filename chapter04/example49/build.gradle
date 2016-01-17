@@ -1,0 +1,9 @@
+tasks.addRule("对该规则的一个描述，便于调试、查看等") { String taskName ->
+    task(taskName) << {
+        println "该${taskName}任务不存在，请查证后再执行"
+    }
+}
+
+task ex49RuleTask {
+    dependsOn missTask
+}
