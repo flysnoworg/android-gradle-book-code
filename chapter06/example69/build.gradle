@@ -1,0 +1,29 @@
+apply plugin:'java'
+apply plugin:'maven'
+
+task publishJar(type: Jar)
+
+group 'org.flysnow.androidgradlebook.ex69'
+version  '1.0.0'
+
+artifacts {
+    archives publishJar
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            name 'libs'
+            dirs "$projectDir/libs"
+        }
+        mavenLocal()
+        mavenDeployer {
+            repository(url: "http://repo.mycompany.com/nexus/content/repositories/releases") {
+                authentication(userName: "usrname", password: "pwd")
+            }
+            snapshotRepository(url: "http://repo.mycompany.com/nexus/content/repositories/snapshots") {
+                authentication(userName: "usrname", password: "pwd")
+            }
+        }
+    }
+}

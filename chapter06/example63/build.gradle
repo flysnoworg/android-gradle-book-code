@@ -1,0 +1,12 @@
+apply plugin:'java'
+
+repositories {
+    mavenCentral()
+    /*maven {
+        url 'http://www.mavenurl.com/'
+    }*/
+}
+
+dependencies {
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+}

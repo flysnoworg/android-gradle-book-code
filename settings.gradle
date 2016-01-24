@@ -66,3 +66,20 @@ include ':example52'
 project(':example52').projectDir = new File(rootDir, 'chapter05/example52')
 include ':example53'
 project(':example53').projectDir = new File(rootDir, 'chapter05/example53')
+//第六章项目例子定义
+include ':example62'
+project(':example62').projectDir = new File(rootDir, 'chapter06/example62')
+include ':example63'
+project(':example63').projectDir = new File(rootDir, 'chapter06/example63')
+include ':example64'
+project(':example64').projectDir = new File(rootDir, 'chapter06/example64')
+include ':example65'
+project(':example65').projectDir = new File(rootDir, 'chapter06/example65')
+include ':example68app'
+project(':example68app').projectDir = new File(rootDir, 'chapter06/example68/app')
+include ':example68base'
+project(':example68base').projectDir = new File(rootDir, 'chapter06/example68/base')
+include ':example69'
+project(':example69').projectDir = new File(rootDir, 'chapter06/example69')
+include ':example610'
+project(':example610').projectDir = new File(rootDir, 'chapter06/example610')
