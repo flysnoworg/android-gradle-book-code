@@ -76,3 +76,5 @@ project(':example82').projectDir = new File(rootDir, 'chapter08/example82')
 //第九章项目例子定义
 include ':example91'
 project(':example91').projectDir = new File(rootDir, 'chapter09/example91')
+include ':example92'
+project(':example92').projectDir = new File(rootDir, 'chapter09/example92')
