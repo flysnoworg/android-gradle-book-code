@@ -1,0 +1,64 @@
+//我是因为代码示例，有比较多的项目，所以把这个配置
+//放在的子工程里，开发中你可以在根工程里配置，这样每个
+//子工程就不用一遍遍配置了
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+
+    defaultConfig {
+        applicationId "org.flysnow.app.example93"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode getAppVersionCode()
+        versionName getAppVersionName()
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+    }
+}
+/**
+ * 以git tag的数量作为其版本号
+ * @return tag的数量
+ */
+def getAppVersionCode(){
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git','tag','--list'
+        standardOutput = stdout
+    }
+    return stdout.toString().split("\n").size()
+}
+
+/**
+ * 从git tag中获取应用的版本名称
+ * @return git tag的名称
+ */
+def getAppVersionName(){
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git','describe','--abbrev=0','--tags'
+        standardOutput = stdout
+    }
+    return stdout.toString()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
