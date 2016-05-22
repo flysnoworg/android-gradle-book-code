@@ -1,4 +1,4 @@
-package org.flysnow.app.example123;
+package org.flysnow.app.example126;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;

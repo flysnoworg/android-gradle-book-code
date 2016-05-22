@@ -102,3 +102,5 @@ include ':example122'
 project(':example122').projectDir = new File(rootDir, 'chapter12/example122')
 include ':example123'
 project(':example123').projectDir = new File(rootDir, 'chapter12/example123')
+include ':example126'
+project(':example126').projectDir = new File(rootDir, 'chapter12/example126')

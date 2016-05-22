@@ -1,0 +1,41 @@
+//我是因为代码示例，有比较多的项目，所以把这个配置
+//放在的子工程里，开发中你可以在根工程里配置，这样每个
+//子工程就不用一遍遍配置了
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "org.flysnow.app.example126"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName '1.0.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+    }
+    lintOptions {
+        abortOnError false
+        warningsAsErrors true
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
