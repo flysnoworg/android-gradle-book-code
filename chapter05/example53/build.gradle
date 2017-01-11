@@ -19,6 +19,6 @@ apply plugin: 'groovy'
 apply plugin: 'com.github.rujews.plugins.ex53customplugin'
 
 dependencies {
-    //compile gradleApi()
-    //compile localGroovy()
+    compile gradleApi()
+    compile localGroovy()
 }
