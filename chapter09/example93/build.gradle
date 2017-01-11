@@ -55,7 +55,7 @@ def getAppVersionName(){
         commandLine 'git','describe','--abbrev=0','--tags'
         standardOutput = stdout
     }
-    return stdout.toString()
+    return stdout.toString().replaceAll("\n","")
 }
 
 dependencies {
