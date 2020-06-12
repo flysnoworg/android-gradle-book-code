@@ -2,6 +2,6 @@
 
 阅读地址
 
-[Android Gradle权威指南](http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e)
+[Android Gradle权威指南](https://item.jd.com/12162983.html)
 
-http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e
+[https://item.jd.com/12162983.html](https://item.jd.com/12162983.html)
